@@ -17,7 +17,10 @@ void setup() {
 }
 
 void createPlatform() {
-  platPos.add(
+  int segments = (int) random(3, 8);
+  for (int i = 0; i < segments; i++) {
+    
+  }
 }
 
 
