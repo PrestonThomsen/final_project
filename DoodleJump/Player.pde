@@ -1,5 +1,4 @@
 public class Player {
-  public PVector pos;
   public PVector dir = new PVector(0, 0);
   
   public Player() {

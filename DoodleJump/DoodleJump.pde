@@ -1,6 +1,7 @@
 int spd = 20;
 int w, h;
 int size = 40;
+PVector pos;
 Player character = new Player();
 
 
