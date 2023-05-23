@@ -11,13 +11,18 @@ void setup() {
   h = height/size;
 }
 
+void draw() {
+  
+  
+}
+
 void moving() {
   if ((character.getPos().x == 0 && character.getPos().x ==-1) || (character.getPos().x == width && character.getPos().x ==1)) {
     if (character.getPos().x == 0 && character.getPos().x ==-1) {
-      character.getPos().x = width;
+      character.setPosX(width);
     }
     else if (character.getPos().x == 0 && character.getPos().x ==1) {
-      character.getPos().x = 0;
+      character.setPosX(0);
     }
   }
 }
@@ -28,11 +33,9 @@ void jumping() {
 
 void keyPressed() {
    if(keyCode == LEFT){
-    character.getDir().x = -1;
-    character.getDir().y = 0;
+    character.setDirX(-1);
   }
   else if(keyCode == RIGHT){
-    character.getDir().x = 1;
-    character.getDir().y = 0;
+    character.setDirX(1);
   }
 }

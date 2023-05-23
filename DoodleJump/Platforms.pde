@@ -1,5 +1,5 @@
 public class Platforms {
-  public ArrayList<PVector> platPos = new ArrayList<PVector>();
+  public ArrayList<ArrayList<PVector>> platPos = new ArrayList<ArrayList<PVector>>();
   public int platLength = 50;
   
   void createPlatform() {

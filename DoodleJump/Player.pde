@@ -1,7 +1,6 @@
 public class Player {
-  public int downMomentum = 0;
   public PVector pos;
-  public PVector dir = new PVector(-1, 0);
+  public PVector dir = new PVector(0, 0);
   
   public Player() {
     pos = new PVector((int)(w/2) * size, (int)(h/2) * size);
@@ -15,8 +14,28 @@ public class Player {
     return dir;
   }
   
+  public void setDir(PVector newDir) {
+    dir = newDir;
+  }
+  
+  public void setDirX(int newDir) {
+    dir.x = newDir;
+  }
+  
+  public void setDirY(int newDir) {
+    dir.y = newDir;
+  }
+  
   public void setPos(PVector newPos) {
     pos = newPos;
+  }
+  
+  public void setPosX (int newPos) {
+    pos.x = newPos;
+  }
+  
+  public void setPosY(int newPos) {
+    pos.y = newPos;
   }
   
   public void drawPlayer() {
