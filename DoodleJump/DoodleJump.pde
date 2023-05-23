@@ -23,6 +23,20 @@ void createPlatform() {
   }
 }
 
+void moving() {
+  if ((pos.x == 0 && dir.x ==-1) || (pos.x == width && dir.x ==1)) {
+    if (pos.x == 0 && dir.x ==-1) {
+      pos.x = width;
+    }
+    else if (pos.x == 0 && dir.x ==1) {
+      pos.x = 0;
+    }
+  }
+}
+
+void jumping() {
+  
+}
 
 void keyPressed() {
    if(keyCode == LEFT){
