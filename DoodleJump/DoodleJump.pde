@@ -2,6 +2,7 @@ int spd = 20;
 int w, h;
 int size = 40;
 PVector pos;
+PVector dir = new PVector(0, 0);
 Player character = new Player();
 
 
@@ -18,12 +19,12 @@ void draw() {
 }
 
 void moving() {
-  if ((character.getPos().x == 0 && character.getPos().x ==-1) || (character.getPos().x == width && character.getPos().x ==1)) {
-    if (character.getPos().x == 0 && character.getPos().x ==-1) {
-      character.setPosX(width);
+  if ((pos.x == 0 && pos.x ==-1) || (pos.x == width && pos.x ==1)) {
+    if (pos.x == 0 && pos.x ==-1) {
+      pos.x = width;
     }
-    else if (character.getPos().x == 0 && character.getPos().x ==1) {
-      character.setPosX(0);
+    else if (pos.x == 0 && pos.x ==1) {
+      pos.x= 0;
     }
   }
 }
@@ -34,9 +35,9 @@ void jumping() {
 
 void keyPressed() {
    if(keyCode == LEFT){
-    character.setDirX(-1);
+    dir.x = -1;
   }
   else if(keyCode == RIGHT){
-    character.setDirX(1);
+    dir.x = 1;
   }
 }
