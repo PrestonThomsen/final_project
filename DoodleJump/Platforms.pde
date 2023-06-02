@@ -21,7 +21,7 @@ public class Platforms {
   }
   
   void powerUp() {
-    
+    powerUpPos = 
   }
   
   void populateWorld() {
