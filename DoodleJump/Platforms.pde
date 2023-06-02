@@ -1,9 +1,10 @@
 public class Platforms {
-  public ArrayList<ArrayList<PVector>> platPos = new ArrayList<ArrayList<PVector>>();
+  public ArrayList<PVector> platPos = new ArrayList<PVector>();
   public int platLength = 50;
+  public ArrayList<boolean> powerUpPos = new ArrayList<boolean>;
   
-  void createPlatform(int x, int y) {
-    rect(x, y, x+60, y+20);
+  void createPlat(int index) {
+    rect(platPos.get(index).x, platPos.get(index).y, platPos.get(index).x+60, platPos.get(index).y+20);
   }
   
   int numberOfPlatforms() {
@@ -14,23 +15,25 @@ public class Platforms {
   void populateList(int lowerY, int upperY) {
     
     for (int x = numberOfPlatforms(); x > 0; x--) {
-      ArrayList holding = new ArrayList<PVector>;
       PVector locationHolding = new PVector(((int) ((upperY-lowerY)*Math.random())), ((int) (Math.random()*length)));
-      if (Math.random()*2 ==0) int thing = -1;
-        else int thing = 1;
-      PVector dirrectionHolding = new PVector (thing, 0);
-      platPos.add(locationHolding);
-      platPos.add(dirrectionHolding);
+      holding.add(locationHolding);
     }
+  }
+  
+  void powerUp() {
     
-    
+  }
+  
+  void populateWorld() {
+    for (int i = 0; i < platPos.size(); i++) {
+      createPlat(i);
+    }
   }
   
   void theRunningMan() {
     for (int x = numberOfPlatforms(); x > 0; x--) {
-      
+      createPlat()
     }
-    
   }
 
 
