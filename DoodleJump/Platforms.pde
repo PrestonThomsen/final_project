@@ -5,7 +5,7 @@ public class Platforms {
   public boolean powerUp;
   public PVector dimension = new PVector();
   
-  public Platforms(float xIn, int yIn) {
+  public Platforms(float xIn, float yIn) {
     location.x = xIn;
     location.y = yIn;
     dimension.x = playerLen*3;
@@ -15,6 +15,15 @@ public class Platforms {
   public Platforms(int x, int y, boolean status) {
     this(x, y);
     powerUp = status;
+  }
+  
+  void setLocality(float inX) {
+    location.x = inX;
+  }
+  
+  void setLocality(float inX, float inY) {
+    setLocality(inX);
+    location.y = inY;
   }
   
   PVector locality() {
